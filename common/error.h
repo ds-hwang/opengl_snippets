@@ -20,7 +20,7 @@
 
 void printGlErrors_(const char* where="", const int line=0);
 
-#define printGlErrors() printGlErrors_(__func__, __LINE__)
+#define printGlErrors() printGlErrors_(__FILE__, __LINE__)
 
 #define fail(...) { fprintf(stderr, "[ERROR] (%s:%d) ", __FILE__, __LINE__); \
                     fprintf(stderr, __VA_ARGS__); \
